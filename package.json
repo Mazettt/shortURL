@@ -1,0 +1,23 @@
+{
+  "name": "short-url",
+  "version": "1.0.0",
+  "description": "An api that allows you to transform an url to a short url.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazettt/Short-URL.git"
+  },
+  "author": "Mazettt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mazettt/Short-URL/issues"
+  },
+  "homepage": "https://github.com/Mazettt/Short-URL#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
