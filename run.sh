@@ -1,5 +1,8 @@
 #!/bin/bash
 
+imageTag=mazettt:bitly
+containerName=mazettt-bitly
+
 if [[ $1 == "-h" ]]; then
     echo "Use -b if you want to build the image before starting the app"
     echo "Use -rm if you want to remove the running container"
@@ -7,12 +10,12 @@ if [[ $1 == "-h" ]]; then
 fi
 
 if [[ $1 == "-rm" ]]; then
-    docker stop mazettt-bitly
-    docker rm mazettt-bitly
+    docker stop $containerName
+    docker rm $containerName
 fi
 
 if [[ $1 == "-b" ]]; then
-    docker build -t mazettt:bitly .
+    docker build -t $imageTag .
 fi
 
-docker run --name="mazettt-bitly" --restart=always -d -p 3012:3012 mazettt:bitly
+docker run --name="$containerName" --restart=always -d -p 3012:3012 $imageTag
