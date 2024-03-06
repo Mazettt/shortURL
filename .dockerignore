@@ -1,0 +1,20 @@
+# Ignore node_modules folder
+node_modules
+
+# Ignore build output folder
+/.next
+
+# Ignore development files
+/.env.local
+/.env.development.local
+/.env.test.local
+/.env.production.local
+
+# Ignore build cache
+/.next/cache
+/.next/server
+/.next/static
+/.next/webpack
+
+# Ignore logs
+*.log

@@ -9,12 +9,12 @@ if [[ $1 == "-h" ]]; then
     exit 0
 fi
 
-if [[ $1 == "-rm" ]]; then
+if [[ $1 == "-rm" ]] || [[ $2 == "-rm" ]]; then
     docker stop $containerName
     docker rm $containerName
 fi
 
-if [[ $1 == "-b" ]]; then
+if [[ $1 == "-b" ]] || [[ $2 == "-b" ]]; then
     docker build -t $imageTag .
 fi
 
