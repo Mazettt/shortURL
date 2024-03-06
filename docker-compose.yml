@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  mazettt-bitly:
+    container_name: mazettt-bitly
+    image: mazettt:bitly
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3012:3012"
+    volumes:
+      - mazettt-bitly-db:/app/data
+    restart: always
+
+volumes:
+  mazettt-bitly-db:
